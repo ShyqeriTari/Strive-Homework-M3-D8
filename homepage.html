@@ -31,18 +31,51 @@
       </nav>
 
 
-   <center> <h2>Homepage</h2> </center>
+   <center> <h2 class="mb-5">Homepage</h2> </center>
+
+  
+
+  
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script>
 const getProducts = () => {
-fetch("https://striveschool-api.herokuapp.com/api/product/"), {
+fetch(("https://striveschool-api.herokuapp.com/api/product/"), {
             headers: {
         "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWZhNmJmZjgyZWExZDAwMTViYjA0NTMiLCJpYXQiOjE2NDM4MDQ1NTMsImV4cCI6MTY0NTAxNDE1M30.CuhoHBbtbf-bhAtwNRt6NLXikvzkGk6UB4Xcj7dTnT8"
         }
-        }.then(response => response.json())
+        }).then(response => response.json())
         .then(body => {
             console.log(body)
+
+            body.forEach(el => {
+
+                let ul = document.createElement("ul")
+                ul.classList.add("list-group")
+                ul.classList.add("mb-3")
+                ul.style.width = " 40%"
+                ul.style.margin = " auto"
+                let file = document.querySelector("body")
+                file.appendChild(ul)
+                ul.innerHTML += `
+
+                <li class="list-group-item"> <b>Name: </b> ${el.name}</li>
+                    <li class="list-group-item"> <b>Description: </b> ${el.description}</li>
+                <li class="list-group-item"> <b>Brand: </b> ${el.brand}</li>
+                 <li class="list-group-item"> <b>Image Url: </b> ${el.imageUrl}</li>
+                    <li class="list-group-item"> <b>Price: </b> ${el.price}</li>
+                
+                
+                
+                
+                
+                `
+
+                
+            });
         })
     }
 

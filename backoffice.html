@@ -77,7 +77,7 @@
 
             
         
-        fetch("https://striveschool-api.herokuapp.com/api/product/"), {
+        fetch(("https://striveschool-api.herokuapp.com/api/product/"), {
         method: "POST",
 
         body : JSON.stringify(myEvent),
@@ -85,7 +85,7 @@
         "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWZhNmJmZjgyZWExZDAwMTViYjA0NTMiLCJpYXQiOjE2NDM4MDQ1NTMsImV4cCI6MTY0NTAxNDE1M30.CuhoHBbtbf-bhAtwNRt6NLXikvzkGk6UB4Xcj7dTnT8",
         "content-type": "application/json"
         }
-        }
+        })
 
         console.log(myEvent)
     }
