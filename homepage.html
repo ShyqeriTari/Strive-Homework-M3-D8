@@ -61,7 +61,7 @@ fetch(("https://striveschool-api.herokuapp.com/api/product/"), {
                 let file = document.querySelector("body")
                 file.appendChild(ul)
                 ul.innerHTML += `
-
+                <li class="list-group-item"> <b>PRODUCT</b> </li>
                 <li class="list-group-item"> <b>Name: </b> ${el.name}</li>
                     <li class="list-group-item"> <b>Description: </b> ${el.description}</li>
                 <li class="list-group-item"> <b>Brand: </b> ${el.brand}</li>
