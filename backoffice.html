@@ -30,12 +30,13 @@
     </div>
   </nav>
 
-  <center> <h2 class="mb-5">Backoffice</h2></center>
+  <center> <h2 class="mb-5" style="color: green;">Backoffice</h2></center>
 
    <form style="width:30%; margin:auto" onsubmit="handleSubmit(event)" >
     <div class="mb-3">
         <label for="name" class="form-label">Name</label>
-        <input type="text" class="form-control" id="name" >      </div>
+        <input type="text" class="form-control" id="name" >     
+       </div>
 
       <div class="mb-3">
         <label for="description" class="form-label" >Description</label>
@@ -53,7 +54,7 @@
 
       <div class="mb-3">
         <label for="price" class="form-label">Price</label>
-        <input type="text" class="form-control" id="price" >
+        <input type="number" class="form-control" id="price" >
       </div>
 
       <button type="submit" class="btn btn-primary">Submit</button>
@@ -66,6 +67,18 @@
         const handleSubmit = (event) => {
 
             event.preventDefault()
+
+      //       let confirm = document.createElement("div")
+      //  confirm.classList.add("mb-5")
+      //  confirm.classList.add("confirm")
+      //  confirm.style.backgroundColor = "rgb(75, 181, 0, 100) "
+      //  confirm.style.color = "white"
+      //  confirm.style.width = "20%"
+      //  confirm.style.margin = "auto"
+      //  confirm.innerText = "Your product has been added successfully!"
+      //  let form = document.querySelector("form")
+
+      //  form.before(confirm)
 
             const myEvent = {
                 "name" : document.getElementById("name").value,
@@ -87,8 +100,12 @@
         }
         })
 
-        console.log(myEvent)
+       alert( "Your product has been added successfully!")
+      
     }
+
+
+    
 
     </script>
   </body>

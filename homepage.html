@@ -31,7 +31,7 @@
       </nav>
 
 
-   <center> <h2 class="mb-5">Homepage</h2> </center>
+   <center> <h2 class="mb-5" style="color: green;">Homepage</h2> </center>
 
   
 
@@ -61,17 +61,13 @@ fetch(("https://striveschool-api.herokuapp.com/api/product/"), {
                 let file = document.querySelector("body")
                 file.appendChild(ul)
                 ul.innerHTML += `
-                <li class="list-group-item"> <b>PRODUCT</b> </li>
+                <li class="list-group-item" style="color: darkcyan;"> <b>PRODUCT</b> </li>
                 <li class="list-group-item"> <b>Name: </b> ${el.name}</li>
                     <li class="list-group-item"> <b>Description: </b> ${el.description}</li>
                 <li class="list-group-item"> <b>Brand: </b> ${el.brand}</li>
                  <li class="list-group-item"> <b>Image Url: </b> ${el.imageUrl}</li>
                     <li class="list-group-item"> <b>Price: </b> ${el.price}</li>
-                
-                
-                
-                
-                
+
                 `
 
                 
