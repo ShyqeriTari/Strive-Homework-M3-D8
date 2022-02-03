@@ -37,7 +37,9 @@
 <div class="container-fluid">
 <div class="row p-3">
 
-
+  <center><div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span></center>
+  </div>
 
 </div>
 
@@ -61,13 +63,16 @@ fetch(("https://striveschool-api.herokuapp.com/api/product/"), {
         .then(body => {
             console.log(body)
 
+            let file = document.querySelector(".row")
+
+            file.innerHTML = " "
+
             body.forEach(el => {
 
                 let ul = document.createElement("ul")
                 ul.classList.add("list-group")
                 ul.classList.add("mb-3")
                 ul.classList.add("col-4")
-                let file = document.querySelector(".row")
                 file.appendChild(ul)
                 ul.innerHTML += `
                 <li class="list-group-item" style="color: darkcyan;"> <b>PRODUCT</b> </li>
