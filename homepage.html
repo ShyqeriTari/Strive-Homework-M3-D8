@@ -75,7 +75,7 @@ fetch(("https://striveschool-api.herokuapp.com/api/product/"), {
                 ul.classList.add("col-4")
                 file.appendChild(ul)
                 ul.innerHTML += `
-                <li class="list-group-item" style="color: darkcyan;"> <b>PRODUCT</b> </li>
+                <li class="list-group-item" style="background-color: rgb(116,166,252); color:white;"> <b>PRODUCT</b> </li>
                 <li class="list-group-item"> <b>Name: </b> ${el.name}</li>
                     <li class="list-group-item"> <b>Price: $ </b> ${el.price}</li>
                     <li class="list-group-item"> <a href="./details.html?productId=${el._id}" style="text-decoration: none;">View details</a></li>
