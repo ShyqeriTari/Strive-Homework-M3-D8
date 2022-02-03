@@ -34,7 +34,17 @@
    <center> <h2 class="mb-5" style="color: green;">Homepage</h2> </center>
 
   
+<div class="container-fluid">
+<div class="row p-3">
 
+
+
+</div>
+
+
+
+
+</div>
   
 
 
@@ -56,16 +66,15 @@ fetch(("https://striveschool-api.herokuapp.com/api/product/"), {
                 let ul = document.createElement("ul")
                 ul.classList.add("list-group")
                 ul.classList.add("mb-3")
-                ul.style.width = " 40%"
-                ul.style.margin = " auto"
-                let file = document.querySelector("body")
+                ul.classList.add("col-4")
+                let file = document.querySelector(".row")
                 file.appendChild(ul)
                 ul.innerHTML += `
                 <li class="list-group-item" style="color: darkcyan;"> <b>PRODUCT</b> </li>
                 <li class="list-group-item"> <b>Name: </b> ${el.name}</li>
                     <li class="list-group-item"> <b>Description: </b> ${el.description}</li>
                 <li class="list-group-item"> <b>Brand: </b> ${el.brand}</li>
-                 <li class="list-group-item"> <b>Image Url: </b> ${el.imageUrl}</li>
+                 <li class="list-group-item" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"> <b>Image Url: </b> ${el.imageUrl}</li>
                     <li class="list-group-item"> <b>Price: </b> ${el.price}</li>
 
                 `
